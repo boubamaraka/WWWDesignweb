@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% block content %}
+{% load staticfiles %}
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Outdoor sitting mats
+            </h1>
+            <!-- <ol class="breadcrumb">
+                <li><a href="index.html">Home</a>
+                </li>
+                <li class="active">Product</li>
+            </ol> -->
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Intro Content -->
+    <div class="row row-content">
+        <div class="col-md-6">
+          <div id="mycarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mycarousel" data-slide-to="1"></li>
+                <li data-target="#mycarousel" data-slide-to="2"></li>
+                <li data-target="#mycarousel" data-slide-to="3"></li>
+                <li data-target="#mycarousel" data-slide-to="4"></li>
+
+            </ol>
+           <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img class="img-responsive" src="{% static 'media/product_1.jpg' %}" alt="">
+                    <div class="carousel-caption">
+                  <p>Mat Product to try</p>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#">
+                      <img class="img-responsive" src="{% static 'media/bike.jpg' %}" alt="">
+                    </a>
+                    <div class="carousel-caption">
+                       <p>A mat can be easily carried on the back.</p>
+                    </div>
+                </div>
+                <div class="item">
+                  <a href="#">
+                      <img class="img-responsive" src="{% static 'media/fireplace_1.jpg' %}" alt="">
+                    </a>
+                    <div class="carousel-caption">
+                        <p>It is always there when you need it!</p>
+                    </div>
+                </div>
+                <div class="item">
+                  <a href="#">
+                      <img class="img-responsive" src="{% static 'media/bird_watching_1.jpg' %}" alt="">
+                    </a>
+                    <div class="carousel-caption">
+                        <p>You outdoor hobby has never been so comfortable!</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                  <a href="#">
+                        <img class="img-responsive" src="{% static 'media/skates.jpg' %}" alt="">
+                    </a>
+                    <div class="carousel-caption">
+                        <p>Do not sit on cold ice when putting on your skates!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+                <span class="icon-prev" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+                <span class="icon-next" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+
+        </div>
+      </div>
+        <div class="col-md-6">
+            <h2>Outdoor sitting mats</h2>
+            <p>Our product is a lightweight cushion (PE-foam mat) used for sitting outdoor in harsh environments, like wet, cold and rough surface. The cushion comes with a printed logo or name of a company, event, club etc.  Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+
+            <form id="buyForm" class="form-horizontal" role="form" novalidate method="post" action="/product/buy/">
+                {% csrf_token %}
+               <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                       <button type="submit" class="btn btn-primary">Buy!</button>
+                   </div>
+               </div>
+           </form>
+
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Team Members -->
+
+    <!-- /.row -->
+
+    <!-- Small examples -->
+    <div class="row row-content">
+        <div class="col-lg-12">
+            <h2 class="page-header">More examples</h2>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive customer-img" src="{% static 'media/fishing.jpg' %}" alt=""  id="image" onclick="big(this)">
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive customer-img" src="{% static 'media/fire_summer_1.jpg' %}" alt="" id="image1" onclick="big1(this)">
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive customer-img" src="{% static 'media/fire_summer_2.jpg' %}" alt="" id="image2" onclick="big2(this)">
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive customer-img" src="{% static 'media/fire_summer_3.jpg' %}" alt="" id="image3" onclick="big3(this)">
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive customer-img" src="{% static 'media/sample_3.jpg' %}" alt="" id="image4" onclick="big4(this)">
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive customer-img" src="{% static 'media/camouflage1.jpg' %}" alt="" id="image5" onclick="big5(this)">
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+function big1(el){
+ $('#image1').bPopup();
+}
+function big2(el){
+ $('#image2').bPopup();
+}
+function big3(el){
+ $('#image3').bPopup();
+}
+function big4(el){
+ $('#image4').bPopup();
+}
+function big5(el){
+ $('#image5').bPopup();
+ }
+ function big(el){
+  $('#image').bPopup();
+  }
+
+
+</script>
+
+{% endblock %}

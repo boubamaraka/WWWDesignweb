@@ -1,0 +1,91 @@
+.navbar-inverse {
+     background:#FF8533;
+     color:#fff;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background: #B34700;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+ .navbar-inverse .navbar-nav > .open > a:hover,
+ .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background: #1A237E;
+}
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 80px;
+    border-bottom: 1px ridge;
+    min-height:400px;
+
+}
+.row-content{
+  background: #F5F5F0;
+
+}
+#rep{
+  padding: 20px;
+}
+#baner{
+color:#191A00;
+text-align: right;
+}
+/*#accordion {
+	background:green;
+	transition:background 2s ease;
+}*/
+.mycard{
+  padding-top:10px;
+
+}
+.card{
+    background-color: #fff;
+    border: 2px solid #D8EAF0;
+    border-radius: 10px;
+}
+#time{
+  float:right;
+  padding-right:10px;
+  margin: 3px;
+}
+.card-heading{
+  padding-bottom: 10px;
+}
+.reply{
+  float:right;
+  padding-right:10px;
+  margin: 3px;
+}
+.panel-heading{
+  background-color: #e0e0d1;
+}
+.well{
+  margin-top: -23px;
+  background-color: #ccccb3;
+}
+#markerList{
+  list-style: circle;
+}
+.carousel {
+    background:#1A237E;
+}
+.carousel .item {
+  height: 400px;
+}
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+}
+.customer-img{
+  position:relative;
+}
+.slider    { overflow:hidden; position:relative; }
+.slider ul { margin:0; padding:0; }
+.slider li { float:left; margin:0 5px 0 0; list-style:none;display: inline;}
+/* IE6 issues */
+.slider ul { width:100%; }

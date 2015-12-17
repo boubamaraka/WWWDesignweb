@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Travel guide
+                <small>for the capital area</small>
+            </h1>
+            <!-- <ol class="breadcrumb">
+                <li><a href="index.html">Home</a>
+                </li>
+                <li class="active">Contact</li>
+            </ol> -->
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Content Row -->
+    <div class="row row-content">
+        <!-- Map Column -->
+        <div class="col-md-8">
+            <!-- Embedded Google Map -->
+            <div id="gMap"></div>
+            <!--iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe-->
+        </div>
+        <!-- Contact Details Column -->
+        <div class="col-md-3 ">
+          <div class="component">
+          <div class="panel panel-primary">
+          <div class="panel-heading">
+
+
+            <h3 class="panel-title">Activity selector</h3>
+          </div>
+
+        <div class="panel-body">
+
+
+
+            <div id="locationFilter">
+
+                <!--<ul id="markerList"></ul>-->
+                <form id="locationForm" class="form-inline" action="">
+                    <!-- THIS IS NOW DYNAMICALLY CREATED IN MAP.JS -->
+                    <!--input id="summerChx" type="checkbox" name="season" value="summer"><label class="checkbox inline">&nbsp;Summer</label><br>
+                    <input id="winterChx" type="checkbox" name="season" value="winter"><label class="checkbox inline">&nbsp;Winter</label-->
+                </form>
+
+        </div>
+      </div>
+      </div>
+          <div class="well">
+              <ul id="markerList"></ul>
+          </div>
+        </div>
+
+            <ul class="list-unstyled list-inline list-social-icons">
+                <li>
+                    <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                </li>
+            </ul>
+        </div>
+      </div>
+
+    <!-- Content Row -->
+
+
+
+
+            <div class="row row-content" >
+              <div class="slider" id="sliderfun">
+                  <ul>
+                   <li  id="locationPhotos"></li>
+                  </ul>
+
+                </div>
+                          <div class="controls">
+
+                        <a href="#" class="prev-slide">Prev Slide</a> |
+                        <a href="#" class="next-slide">Next Slide</a> |
+
+                    </div>
+            </div>
+
+
+
+    <!-- /.row -->
+
+
+    <!-- /.row -->
+
+</div>
+<script>
+      window.onload = function(){
+
+      $( '#sliderfun' ).lemmonSlider({
+        'infinite' : true
+      });
+
+
+      }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD80_YxdlsnPmgr8Y3LGjarxY76NSPjGH4&libraries=places&callback=initMap&initFilters&initActivities" async defer></script>
+{% endblock %}
